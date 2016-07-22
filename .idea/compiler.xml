@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="eMusicStore" />
+        <module name="FantasyTours" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eMusicStore" target="1.5" />
+      <module name="FantasyTours" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

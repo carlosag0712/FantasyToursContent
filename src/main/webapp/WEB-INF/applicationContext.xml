@@ -5,10 +5,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.h2.Driver" />
-        <property name="url" value="jdbc:h2:tcp://localhost/~/test"/>
-        <property name="username" value="sa" />
-        <property name="password" value=""/>
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://127.0.0.1:3306/test"/>
+        <property name="username" value="root" />
+        <property name="password" value="admin"/>
     </bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -16,7 +16,7 @@
     <property name="hibernateProperties">
         <props>
 
-            <prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+            <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
             <prop key="hibernate.hbm2ddl.auto">update</prop>
             <prop key="hibernate.show_sql">true</prop>
             <prop key="hibernate.format_sql">true</prop>
@@ -28,7 +28,7 @@
         <property name="packagesToScan">
 
             <list>
-                <value>com.emusicstore</value>
+                <value>com.fantasytours</value>
 
             </list>
         </property>
